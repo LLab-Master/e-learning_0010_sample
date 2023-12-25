@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+  会員登録
+{% endblock %}
+{% block content %}
+    以下の内容で登録します。
+    <table>
+        <tr><th>Id: </th><td>{{ new_member.id }}</td></tr>
+        <tr><th>名前: </th><td>{{ new_member.name }}</td></tr>
+        <tr><th>年齢: </th><td>{{ new_member.age }}</td></tr>
+        <tr><th>誕生日: </th><td>{{ new_member.birthday }}</td></tr>
+        <tr><th>Password: </th><td>{{ new_member.password }}</td></tr>
+    </table>
+{% endblock %}

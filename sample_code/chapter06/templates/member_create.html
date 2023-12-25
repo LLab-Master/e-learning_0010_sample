@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}メンバー登録{% endblock %}
+{% block content %}
+<h1>メンバー登録</h1>
+<form method="post" novalidate>
+    {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+    <input type="submit" value="追加">
+</form>
+
+{% endblock %}

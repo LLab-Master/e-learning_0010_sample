@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Image form{% endblock %}
+{% block content %}
+    {{ msg }}
+    <form method="post" novalidate>
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+    </form>
+{% endblock %}

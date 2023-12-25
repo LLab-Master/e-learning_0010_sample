@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block title %}django-bootstrap5{% endblock %}
+{% block content %}
+    <p>django-boostrap5 のサンプル</p>
+    <form method="post" novalidation>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% bootstrap_button button_type="submit" content="送信" size="lg" %}
+    </form>
+{% endblock %}

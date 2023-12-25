@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}FormView{% endblock %}
+{% block content %}
+    <h1>FormView のサンプル</h1>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        <table>
+        {{ form }}
+        </table>
+        <input type="submit" value="送信">
+    </form>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Template sample</title>
+</head>
+<body>
+    <h1>Django テンプレートの例</h1>
+    <h2>変数表示</h2>
+    {{ simple_var }}
+
+    <h2>リスト</h2>
+    {{ list_var.0 }}, {{ list_var.1 }}, {{ list_var.2 }}, {{ list_var.3 }}
+
+    <h2>辞書</h2>
+    {{ dic_var.key1 }}, {{ dic_var.key2 }}, {{ dic_var.key3 }}
+
+    <h2> default フィルタ</h2>
+    {{ var2|default:'変数 var2 は存在ししません'}}
+
+    <h2> 条件分岐 </h2>
+    {% if not var2 %}
+        変数 var2 は存在しません
+    {% endif %}
+
+    <h2> ループ </h2>
+    {% for v in list_var %}
+        {{ v }},
+    {% endfor %}
+
+    <h2> url タグ</h2>
+    このページのURLからドメイン名部分を除いたものは {% url 'chapter03:tmp_smpl' %}です
+</body>
+</html>

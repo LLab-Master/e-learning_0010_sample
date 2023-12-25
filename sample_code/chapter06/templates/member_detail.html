@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}ListView{% endblock %}
+{% block content %}
+    <h2>メンバー詳細</h2>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>名前</th>
+            <th>Eメール</th>
+        </tr>
+        <tr>
+            <td>{{ object.id }}</td>
+            <td>{{ object.name }}</td>
+            <td>{{ object.email }}</td>
+        </tr>
+    </table>
+{% endblock %}

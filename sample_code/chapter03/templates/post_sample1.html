@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Top page</title>
+</head>
+<body>
+    <H1>フォームのサンプル(POST)</H1>
+    <div>入力してください
+        <form action="{% url 'chapter03:param_from_form' %}" method="post">
+            {% csrf_token %}
+            名前:<input type="text" name="p_name"><br>
+            年齢:<input type="text" name="p_age"><br>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</body>
+</html>

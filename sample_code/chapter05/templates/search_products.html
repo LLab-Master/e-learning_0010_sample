@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}検索結果1{% endblock %}
+{% block content %}
+<h3>検索条件: {{ condition }}</h3>
+    <table border="1">
+        <tr>
+            <th>商品名</th>
+            <th>定価</th>
+        </tr>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
